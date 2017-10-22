@@ -1,0 +1,40 @@
+How did viewing a diff between two versions of a file help you see the bug that was introduced?
+ - The diff clearly showed the differences between the files, line by line.
+
+
+
+How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+ - It would allow for returning to old ideas without having to re-imagine them, and trace back bugs/errors.
+
+
+
+What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+
+ - Pros:
+    * Your history/log of changes has (ideally) more meaningful entries created by the person(s) doing the changing, which is helpful for going back through old changes to trace bugs, go back to old ideas, or create a new branch.
+    * Limits/eliminates arbitrary versions which can lead to an unnecessarily large and confusing change log.
+
+ - Cons:
+    * Takes more time/effort from contributors than an automatic system
+    * Could arguably not be worth the time/energy on very small projects with a short shelf life
+    * Takes time/effort to learn the relatively more complicated system (whereas some auto-saving systems like Google Docs "just work" out of the box)
+
+
+
+Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+ - Git allows saving multiple files in one commit because its common in coding to have related changes across multiple files whereas its a less common use case for most users of Google Docs who largely are interested in changes to individual, separate files.
+
+
+
+ How can you use the commands git log and git diff to view the history of files?
+  - git log shows a log of every committed change to a repo, and git diff shows the differences between two committed versions of a repo
+
+
+
+How might using version control make you more confident to make changes that could break something?
+ - Git makes reverting your entire project back to a previous "stable" state (and then back again to the "HEAD" version, or any other commited snapshot) almost trivially easy, so introducing new, possibly breaking code doesn't have the cost of having to debug without confidently knowing you CAN easily/quickly find a working version of a file (let alone reverting a whole project with multiple files back to a working state).
+
+
+
+Now that you have your workspace set up, what do you want to try using Git for?
+ - I'd like to learn how to commit, branch, fork, etc. via CLI and learn more ins and outs of using Git so I can feel confident applying it to live projects 
