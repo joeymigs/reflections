@@ -1,38 +1,58 @@
 What happens when you initialize a repository? Why do you need to do it?
- - Git creates a new hidden directory called '.git' populated with the necessary files/sub-directories necessary for Git to track the main directory's contents (i.e. initializing Git for the directory/repo).
+ - Git creates a new hidden directory called '.git' populated with the
+   necessary files/sub-directories necessary for Git to track the main
+   directory's contents (i.e. initializing Git for the directory/repo).
 
 
 
 How is the staging area different from the working directory and the repository?
 What value do you think it offers?
- - Working directory = The dir on your local machine that contains the current state of your local copy of the repo
- - Repository 		 = The entire project, including all commit versions
- - Staging area		 = A "temporary" "directory" that contains files/directories(?) that have either just been added or updated, allowing you to organize them (include/exclude files) before committing them to the repo
+ - Working directory = The dir on your local machine that contains the current
+                       state of your local copy of the repo
+ - Repository 	     = The entire project, including all commit versions
+ - Staging area	     = A "temporary" "directory" that contains files/dirs(?)
+                       that have either just been added or updated, allowing
+                       you to organize them (include/exclude files) before
+                       committing them to the repo
 
 
 
 How can you use the staging area to make sure you have one commit per logical
 change?
-
+ - By using git diff/git diff --staged, you can compare the state of the files
+   in your working directory vs. the staging area/the staging area vs. the repo
+   to make sure you know exactly which files will be committed. Before
+   committing, you can choose (add/remove) exactly which files you want to
+   include in the commit.
 
 
 
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
-
-
+ - Branches would be very useful when working on new or experimental features
+   that affect or are split across multiple files. Having separate branches
+   would allow for making changes while working on other unrelated features
+   /fixes.
 
 
 How do the diagrams help you visualize the branch structure?
-
+ - They’re useful for showing the relationships between commits in various
+   branches, including which commits branches stem from and whether or not
+   certain commits are “reachable” or not.
 
 
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
-
+ - The result is a combination of all of the commits from both branches in
+   chronological order. It’s represented with the arrows to show that each
+   commit has a parent, a reference to which is stored by git (accessible via
+   git show)
 
 
 
 What are the pros and cons of Git's automatic merging vs. always doing merges
 manually?
+ - Pros: Git safely adds/removes lines w/o needing to double-check every time,
+         and points out conflicts for you to resolve when needed.
+ - Cons: None?
